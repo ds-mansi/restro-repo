@@ -27,6 +27,7 @@ const menus=props.links?.c_footerLinks?.menus?.map((link:any) => (
    return (
       <>
          <footer className="footer" style={{backgroundColor:"#f1d7b1", width:"100%", display:"flex"}}>
+            <br/>
             <div className="container" style={{display:"flex",marginTop:"50px"}}>
                   <a className="logo" href="/">
                     <img style={{height:"109px"}} src={props.links.c_footerLogo.url}/> 
