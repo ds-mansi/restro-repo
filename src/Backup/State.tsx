@@ -168,7 +168,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           type: "meta",
           attributes: {
             property: "og:description",
-            content: `${document.c_meta_description?document.c_meta_description:`Find MGM Timber Store in ${document.name}. We stock high-quality, robust products at competitive rates.`}`,
+            content: `${document.c_meta_description?document.c_meta_description:`Find  Club Mate Restro Store in ${document.name}. We deliver our best food.`}`,
           },
         },
         {
