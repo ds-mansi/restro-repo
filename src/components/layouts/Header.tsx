@@ -30,7 +30,10 @@ const Header = (props:any) => {
           <div className="headerLogo">
                     <a className="logo" href="/" style={{display:"grid",placeItems:"center"}}>
                       <div style={{margin:"19px 0px 19px 0px"}}>
-                      <img style={{height:"109px"}} src={props._site.c_footerLogo.url}/> 
+                      <img style={{height:"109px",marginLeft:"25px"}} src={props._site.c_footerLogo.url}/> 
+                      <h3 className="text-4xl font-normal leading-normal mt-0 mb-2 text-indigo-800" style={{color:"#e30814"}}>
+                        Club Mate
+                      </h3>
                       </div>
                     </a>
                     <hr/>
