@@ -10,7 +10,7 @@ const toggle=()=>{
     };
 
 const About=props.links?.c_footerLinks?.about?.map((link:any) => (
-   <a className="navbar-item" href={link.link} > 
+   <a className="navbar-item" href={link.link}> 
      <span>{link.label}</span><br /></a>
   
 ));
@@ -26,25 +26,25 @@ const menus=props.links?.c_footerLinks?.menus?.map((link:any) => (
 ));
    return (
       <>
-         <footer className="footer">
-            <div className="container" style={{display:"flex"}}>
+         <footer className="footer" style={{backgroundColor:"#f1d7b1"}}>
+            <div className="container" style={{display:"flex",marginTop:"50px"}}>
                   <a className="logo" href="/">
                     <img style={{height:"109px"}} src={props.links.c_footerLogo.url}/> 
                   </a>
             
-               <div className="footer_links">
-                  <div className="column">
+               <div className="footer_links" style={{display:"flex"}}>
+                  <div className="column" style={{marginLeft:"20px"}}>
                   <h2 style={{fontSize:"50px"}}>About</h2>
-                  <ul>
-                     <li style={{display:"block",textDecoration:"none"}}>{About} </li>  </ul>
+                  
+                     <li style={{display:"block",textDecoration:"none",marginTop:"25%"}}>{About} </li> 
                   </div>
-                  <div className="column">
+                  <div className="column" style={{marginLeft:"200px"}}>
                   <h2 style={{fontSize:"50px"}}>Contact Us</h2>
-                    <li style={{display:"block",textDecoration:"none"}}> <a>{contactUs}</a></li>
+                    <li style={{display:"block",textDecoration:"none",marginTop:"15%"}}> <a>{contactUs}</a></li>
                   </div>
-                  <div className="column">
+                  <div className="column" style={{marginLeft:"200px"}}>
                      <h2 style={{fontSize:"50px"}}>Menu</h2>
-                     <li style={{display:"block",textDecoration:"none"}}><a>{menus}</a></li>
+                     <li style={{display:"block",textDecoration:"none",marginTop:"25%"}}><a>{menus}</a></li>
                   </div>
                   </div>
                </div>
