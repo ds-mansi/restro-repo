@@ -236,7 +236,7 @@ const loading = useSearchState(s=>s.searchStatus.isLoading);
 
         </div>
       </div>
-      <div className="locator-main" style={{width:"100%"}}>
+      <div className="locator-main">
         {allowlocation.length > 0 ?
           <div className="for-allow">{allowlocation}</div>
           : ''}
