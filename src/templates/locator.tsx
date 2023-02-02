@@ -16,6 +16,7 @@ import { useEffect } from "react";
 import Header from "../components/layouts/Header";
 import Footer from "../components/layouts/Footer";
 import SearchLayout from "../components/locatorPage/SearchLayout";
+import Banner from "../components/locationDetail/banner";
 import {stagingBaseurl, favicon, AnalyticsEnableDebugging, AnalyticsEnableTrackingCookie} from "../../sites-global/global"
 import Newsletter from "../components/locatorPage/Newsletter";
 import { JsonLd } from "react-schemaorg";
@@ -25,6 +26,7 @@ import {
   AnalyticsScopeProvider,
 } from "@yext/pages/components";
 import { AnswerExperienceConfig } from "../config/answersHeadlessConfig";
+
 
 export const config: TemplateConfig = {
   stream: {
@@ -196,7 +198,7 @@ const Locator: Template<TemplateRenderProps>= ({
         {" "}
         <AnalyticsScopeProvider name={""}>
         <Header _site={_site}/>
-
+        <Banner _site={_site}/>
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
           locale={AnswerExperienceConfig.locale}

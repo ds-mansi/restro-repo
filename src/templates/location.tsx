@@ -70,6 +70,12 @@ export const config: TemplateConfig = {
       "timezone",
       "yextDisplayCoordinate",
       "displayCoordinate",
+      "c_about",
+      "c_banner",
+      "c_restroServices",
+      "c_faq"
+
+
       //"cityCoordinate"
     ],
     // Defines the scope of entities that qualify for this stream.
@@ -209,7 +215,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         type: "meta",
         attributes: {
           name: "twitter:title",
-          content: document.c_meta_title?document.c_meta_title:`${document.name} Store of  Club Mate Restro`,
+          content: document.c_meta_title?document.c_meta_title:`${document.name} Store of Club Mate Restro`,
         },
       },
       {
@@ -274,7 +280,11 @@ const Location: Template<ExternalApiRenderData> = ({
     yextDisplayCoordinate,
     displayCoordinate,
     cityCoordinate,
-    name
+    name,
+    c_about,
+    c_banner,
+    c_restroServices,
+    c_faq
   } = document;
 
  let templateData = { document: document, __meta: __meta };
@@ -442,8 +452,7 @@ breadcrumbScheme.push({
         {" "}
         <AnalyticsScopeProvider name={""}>
         <Header _site={_site}/>
-
-
+       <img src={c_banner.banner.url}/>
       <div className="container">
             <div className='banner-text banner-dark-bg justify-center text-center'>
               <h1 className="">{name}</h1>
