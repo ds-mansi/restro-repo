@@ -482,18 +482,22 @@ breadcrumbScheme.push({
               </div>
           }
         </div>
-        <div style={{backgroundColor:"#dfded8",display: "flex",flexWrap: "wrap"}}>
-        <h2 style={{fontSize:"50px",margin:"25px",color:"#6c4e25",marginLeft:"60px",alignContent:"center"}}>ABOUT</h2>
+        <div>
+        <div style={{backgroundColor:"#dfded8",flexWrap: "wrap",paddingTop:"25px"}}>
+        <div style={{textAlign:"center"}}>
+          <h2 style={{fontSize:"50px",color:"#6c4e25",marginLeft:"60px",alignContent:"center"}}>ABOUT</h2></div>
           <div style={{display:"flex",marginLeft:"60px"}}>
-            <div>{c_about.description }</div>
-            <img src={c_about.photo.url} style={{height: "450px",width:"550px",float:"right"}}/>
+            <div style={{marginTop:"12%",paddingRight:"20px"}}>{c_about.description }</div>
+            <img src={c_about.photo.url} style={{height: "350px",width:"550px",float:"right",marginTop:"40px"}}/>
             <br/>
           </div>
-            <a  href={c_about.cTA.link} style={{margin:"auto"}}>
-            <button type="button" style={{color:"#f1d7b1",backgroundColor:"#6c4e25",padding:"18px",border:"yellow",border:"2px solid #f1d7b1",borderRadius: "10px",margin:"10px",}}>
+          <a  href={c_about.cTA.link} style={{margin:"auto"}}>
+            <button type="button" style={{color:"#f1d7b1",backgroundColor:"#6c4e25",padding:"18px",border:"yellow",border:"2px solid #f1d7b1",borderRadius: "10px",margin:"10px",marginLeft:"60px"}}>
               {c_about.cTA.label}
               </button>
             </a>
+          </div>
+            
             </div>
             <br/>
             <div style={{margin:"auto"}}>
@@ -504,14 +508,14 @@ breadcrumbScheme.push({
             </div>
             <div style={{backgroundColor:"#dfded8"}}>
               <h2 style={{fontSize:"50px",margin:"30px",textAlign:"center",color:"#6c4e25"}}>Services</h2>
-              <div ><div style={{textAlign:"center",marginBottom:"30px"}}>
-                
-                 <ul style={{display:"inline-block"}}>
+              
+                <div style={{textAlign:"center",marginBottom:"30px"}}>
+                 <ul style={{display:"inline-block",fontSize:"25px",marginTop:"15px"}}>
                   <li>{services}</li>
                   </ul>
               </div>
               </div>
-            </div>
+            
         <div className="nearby-sec">
           <div className="container">
             <div className="sec-title"><h2 className="">{StaticData.NearStoretext}</h2></div>
