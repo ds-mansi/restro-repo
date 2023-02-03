@@ -4,6 +4,7 @@ import Cta from "../components/commons/cta";
 import Contact from "../components/locationDetail/contact";
 import ApiCall from "../Apis/ApiCall";
 import Nearby from "../components/locationDetail/Nearby";
+import Faqs from "../components/locationDetail/Faqs";
 import { CustomFieldDebuggerReactProvider } from '@yext/custom-field-debugger';
 import { JsonLd } from "react-schemaorg";
 import Opening from "../components/commons/openClose";
@@ -73,7 +74,8 @@ export const config: TemplateConfig = {
       "c_about",
       "c_banner",
       "c_restroServices",
-      "c_faq"
+      "c_faq.name",
+      "c_faq.answer"
 
 
       //"cityCoordinate"
@@ -408,7 +410,12 @@ breadcrumbScheme.push({
   console.log(document)
   let bannerimage = c_banner_image && c_banner_image.image.url;
 
-
+  const services = c_restroServices.services.map((link:any) => (
+    
+      <ul>
+        <li>{link.label}</li></ul>
+   
+));
   return (
 
     <>
@@ -475,7 +482,36 @@ breadcrumbScheme.push({
               </div>
           }
         </div>
-  
+        <div style={{backgroundColor:"#dfded8",display: "flex",flexWrap: "wrap"}}>
+        <h2 style={{fontSize:"50px",margin:"25px",color:"#6c4e25",marginLeft:"60px",alignContent:"center"}}>ABOUT</h2>
+          <div style={{display:"flex",marginLeft:"60px"}}>
+            <div>{c_about.description }</div>
+            <img src={c_about.photo.url} style={{height: "450px",width:"550px",float:"right"}}/>
+            <br/>
+          </div>
+            <a  href={c_about.cTA.link} style={{margin:"auto"}}>
+            <button type="button" style={{color:"#f1d7b1",backgroundColor:"#6c4e25",padding:"18px",border:"yellow",border:"2px solid #f1d7b1",borderRadius: "10px",margin:"10px",}}>
+              {c_about.cTA.label}
+              </button>
+            </a>
+            </div>
+            <br/>
+            <div style={{margin:"auto"}}>
+              <h2 style={{fontSize:"50px",margin:"30px",textAlign:"center",color:"#6c4e25"}}>FAQS</h2>
+              <br/>
+              <div><Faqs faq={c_faq}/></div>
+              <br/>
+            </div>
+            <div style={{backgroundColor:"#dfded8"}}>
+              <h2 style={{fontSize:"50px",margin:"30px",textAlign:"center",color:"#6c4e25"}}>Services</h2>
+              <div ><div style={{textAlign:"center",marginBottom:"30px"}}>
+                
+                 <ul style={{display:"inline-block"}}>
+                  <li>{services}</li>
+                  </ul>
+              </div>
+              </div>
+            </div>
         <div className="nearby-sec">
           <div className="container">
             <div className="sec-title"><h2 className="">{StaticData.NearStoretext}</h2></div>

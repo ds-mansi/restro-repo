@@ -198,7 +198,7 @@ const Locator: Template<TemplateRenderProps>= ({
         {" "}
         <AnalyticsScopeProvider name={""}>
         <Header _site={_site}/>
-        <Banner _site={_site}/>
+        <Banner/>
         <SearchHeadlessProvider
           experienceKey={AnswerExperienceConfig.experienceKey}
           locale={AnswerExperienceConfig.locale}
