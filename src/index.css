@@ -75,7 +75,7 @@ nav .active{ @apply bg-light-red}
 .site-header .main-nav ul li a{  @apply inline-block w-full   px-6 xl:px-8 align-top relative lg:border-t-2 border-transparent hover:border-red}
 .logo{@apply text-center;
  display: block;
- padding: 20px;
+ padding: 13px;
 }
 .logo-inner{@apply max-w-[9.375rem] mx-auto lg:mx-0  lg:max-w-[14.375rem] }
 .logo svg{@apply  mx-auto lg:mx-0  }
