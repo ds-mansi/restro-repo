@@ -27,27 +27,25 @@ const Header = (props:any) => {
     <>
     
         <div id="header" className="header-nav" style={{backgroundColor:"#f1d7b1"}}>
-          <div className="headerLogo">
-                    <a className="logo" href="/" style={{display:"grid",placeItems:"center"}}>
-                      <div>
-                      <img style={{height:"100px",marginLeft:"25px"}} src={props._site.c_footerLogo.url}/> 
-                      <h3 className="text-4xl font-normal leading-normal mt-0 mb-2 text-indigo-800" style={{color:"#e30814"}}>
-                        Club Mate
-                      </h3>
+          <div className="headerLogo" style={{display:"flex",alignItems:"center"}}>
+                    <a className="logo" href="/" >
+                      <div >
+                      <img src={props._site.c_footerLogo.url} style={{display: "inline-block",float: "left",height:"100px"}}/> 
                       </div>
                     </a>
-                    <hr/>
-                    <hr/>
-                </div>
-          <div className="container">
-            <nav className="navbar" style={{color:"black",padding:"19px 0px 19px 0px"}}>
-              {linkDoms}
-            </nav>
-            
-          </div>
-          <hr/>
-          <hr/>
-        </div>
+                    <h5 className="text-4xl font-normal leading-normal mt-0 mb-2 text-indigo-800" style={{color:"#e30814",float:"left"}}>
+                        Club Mate
+                  </h5>
+                    <div style={{margin:"auto"}}>
+                      <nav className="navbar" style={{color:"black",padding:"19px 0px 19px 0px"}}>
+                        {linkDoms}
+                      </nav>
+                 </div> 
+                 
+              </div>
+                
+                 
+             </div>
     </>
   );
 };

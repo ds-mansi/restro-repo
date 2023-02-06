@@ -11,10 +11,10 @@ return(
   <>
  
     {props.faq && props.faq.map((res:any)=>{
-        return(
-            <>
+      return(
+        <>
             
-            <div style={{}}>
+            <div>
       
       <Accordion style={{ width: "80%",margin:"auto",backgroundColor:"#f1d7b1"}}>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}aria-controls="panel1a-content" style={{borderBottom:"1px solid #6c4e25" }}>
