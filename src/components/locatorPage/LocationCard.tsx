@@ -51,6 +51,12 @@ function opentime(e: any) {
 //  } else {
 //    url= `/${result.rawData.slug.toString()}.html`;
 //  }
+// const services = c_restroServices.services.map((link:any) => (
+    
+//   <ul>
+//     <li>{link.label}</li></ul>
+
+// ));
   
   return (
     
@@ -121,12 +127,28 @@ function opentime(e: any) {
               {result.rawData.displayCoordinate ?
                 <GetDirection buttonText={StaticData.getDirection} address={address} latitude={result.rawData.displayCoordinate?.latitude} longitude={result.rawData.displayCoordinate?.longitude} />
                 : <GetDirection buttonText={StaticData.getDirection} address={address} latitude={result.rawData.yextDisplayCoordinate?.latitude} longitude={result.rawData.yextDisplayCoordinate?.longitude} />}
+              
+            
             </div>
-          
+            <div>
+            <div style={{ marginLeft: "21px",fontSize: "20px",padding: "9px",marginTop:"7px"}}>
+              <button style={{backgroundColor:"#f1d7b1",padding:"5px",border:"1px solid black"}}><a href="/">Services</a></button>
+            </div>
+            <div style={{display:"flex",marginLeft: "29px",gap:"20px"}}>
+            
+            
+              {result.rawData.c_restroServices?.services.map((item:any)=>{
+              return(<>
+                
+                <ul><li style={{}}>{item.label}</li></ul>
+                </>
+                )
+            })}
+            </div>
          
 
           </div>
-
+          </div>
         </div>
       </div>
     </div>
