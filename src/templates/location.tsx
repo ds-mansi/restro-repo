@@ -507,7 +507,7 @@ breadcrumbScheme.push({
               <br/>
             </div>
             <div style={{backgroundColor:"#dfded8",marginTop:"60px",paddingBottom:"40px"}}>
-              <h2 style={{fontSize:"50px",margin:"30px",textAlign:"center",color:"#6c4e25"}}>Services</h2>
+              <h2 style={{fontSize:"50px",margin:"30px",textAlign:"center",color:"#6c4e25",paddingTop:"20px"}}>Services</h2>
               
                 <div style={{textAlign:"center",marginBottom:"30px"}}>
                  <ul style={{display:"inline-block",fontSize:"25px",marginTop:"15px"}}>
