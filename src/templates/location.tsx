@@ -492,7 +492,7 @@ breadcrumbScheme.push({
             <br/>
           </div>
           <a  href={c_about.cTA.link} style={{margin:"auto"}}>
-            <button type="button" style={{color:"#f1d7b1",backgroundColor:"#6c4e25",padding:"18px",border:"yellow",border:"2px solid #f1d7b1",borderRadius: "10px",margin:"10px",marginLeft:"60px"}}>
+            <button type="button" style={{color:"#f1d7b1",backgroundColor:"#6c4e25",padding:"18px",border:"2px solid #f1d7b1",borderRadius: "10px",margin:"10px",marginLeft:"60px"}}>
               {c_about.cTA.label}
               </button>
             </a>
