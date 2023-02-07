@@ -458,7 +458,7 @@ breadcrumbScheme.push({
       >
         {" "}
         <AnalyticsScopeProvider name={""}>
-        <Header _site={_site}/>
+        {/* <Header _site={_site}/>
        <img src={c_banner.banner.url}/>
       <div className="container">
             <div className='banner-text banner-dark-bg justify-center text-center'>
@@ -529,7 +529,7 @@ breadcrumbScheme.push({
         </div>
         <br/>
 
-        <Footer links={_site}/>
+        <Footer links={_site}/> */}
       </AnalyticsScopeProvider>
       </AnalyticsProvider>
     </>
