@@ -228,12 +228,6 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
         },
       },
       /// twitter tag
-
-
-
-
-
-
     ],
 
   };
@@ -245,7 +239,7 @@ export const transformProps: TransformProps<ExternalApiData> = async (
 
   var location = `${data.document.yextDisplayCoordinate ? data.document.yextDisplayCoordinate.latitude : data.document.displayCoordinate.latitude},${data.document.yextDisplayCoordinate ? data.document.yextDisplayCoordinate.longitude : data.document.displayCoordinate.longitude}`;
 
-    const url = `${AnswerExperienceConfig.endpoints.verticalSearch}?experienceKey=${AnswerExperienceConfig.experienceKey}&api_key=${AnswerExperienceConfig.apiKey}&v=20220511&version=${AnswerExperienceConfig.experienceVersion}&locale=${AnswerExperienceConfig.locale}&location=${location}&locationRadius=${AnswerExperienceConfig.locationRadius}&verticalKey=${AnswerExperienceConfig.verticalKey}&limit=4&retrieveFacets=true&skipSpellCheck=false&sessionTrackingEnabled=true&source=STANDARD`;
+    const url = `https://liveapi-sandbox.yext.com/v2/accounts/me/entities/geosearch?api_key=89533a282a54cddff3823fbc30582f38&v=20230110&location=United%20Kingdom&radius=2500&limit=4`;
  console.log(url)
   const externalApiData = (await fetch(url).then((res: any) =>
     res.json()
@@ -416,6 +410,7 @@ breadcrumbScheme.push({
         <li>{link.label}</li></ul>
    
 ));
+console.log(externalApiData,"static" )
   return (
 
     <>
@@ -459,7 +454,7 @@ breadcrumbScheme.push({
         {" "}
         <AnalyticsScopeProvider name={""}>
         <Header _site={_site}/>
-       <img src={c_banner.banner.url}/>
+       <img src={c_banner?.banner?.url}/>
       <div className="container">
             <div className='banner-text banner-dark-bg justify-center text-center'>
               <h1 className="">{name}</h1>
@@ -487,13 +482,13 @@ breadcrumbScheme.push({
         <div style={{textAlign:"center"}}>
           <h2 style={{fontSize:"50px",color:"#6c4e25",marginLeft:"60px",alignContent:"center"}}>ABOUT</h2></div>
           <div style={{display:"flex",marginLeft:"60px"}}>
-            <div style={{marginTop:"12%",paddingRight:"20px"}}>{c_about.description }</div>
-            <img src={c_about.photo.url} style={{height: "350px",width:"550px",float:"right",marginTop:"40px"}}/>
+            <div style={{marginTop:"12%",paddingRight:"20px"}}>{c_about?.description }</div>
+            <img src={c_about?.photo?.url} style={{height: "350px",width:"550px",float:"right",marginTop:"40px"}}/>
             <br/>
           </div>
-          <a  href={c_about.cTA.link} style={{margin:"auto"}}>
+          <a  href={c_about?.cTA?.link} style={{margin:"auto"}}>
             <button type="button" style={{color:"#f1d7b1",backgroundColor:"#6c4e25",padding:"18px",border:"2px solid #f1d7b1",borderRadius: "10px",margin:"10px",marginLeft:"60px"}}>
-              {c_about.cTA.label}
+              {c_about?.cTA?.label}
               </button>
             </a>
           </div>
@@ -507,14 +502,14 @@ breadcrumbScheme.push({
               <br/>
             </div>
             <div style={{backgroundColor:"#dfded8",marginTop:"60px",paddingBottom:"40px"}}>
-              <h2 style={{fontSize:"50px",margin:"30px",textAlign:"center",color:"#6c4e25",paddingTop:"20px"}}>Services</h2>
+              <div className="col-span-full text-center " style={{fontSize: "50px",margin: "30px",color: "#6c4e25",paddingTop: "20px"}}>Services</div>
               
-                <div style={{textAlign:"center",marginBottom:"30px"}}>
-                 <ul style={{display:"inline-block",fontSize:"25px",marginTop:"15px"}}>
-                  <li style={{display:"flex",gap:"100px"}}>{services}</li>
-                  </ul>
+                  <div className="text-center flex flex-wrap gap-y-5 text-lg services-wrapper">
+                    {services}
+                  </div>
+                  
               </div>
-              </div>
+             
             
         <div className="nearby-sec">
           <div className="container">

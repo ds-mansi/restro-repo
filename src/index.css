@@ -470,6 +470,10 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 .services-inner .splide__arrow--prev{@apply -left-8 }
 .services-inner .splide__arrow--next{ @apply -right-8 }
 
+.services-wrapper ul{
+  @apply w-1/2;
+}
+
 
 /* faq */
 .faq-main-sec{@apply m-0 relative pb-7 pt-0 md:pb-12 }
