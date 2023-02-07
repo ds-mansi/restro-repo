@@ -472,9 +472,13 @@ nav[aria-label="Pagination"] button:disabled{@apply cursor-not-allowed text-opac
 
 .services-wrapper ul{
   @apply w-1/2;
+  font-weight: bold;
 }
 
-
+.services-wrapper ul:hover{
+  font-size: large;
+  text-decoration: underline;
+}
 /* faq */
 .faq-main-sec{@apply m-0 relative pb-7 pt-0 md:pb-12 }
 .faq-sec{@apply m-0 }

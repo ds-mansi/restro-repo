@@ -140,7 +140,7 @@ function opentime(e: any) {
               {result.rawData.c_restroServices?.services.map((item:any)=>{
               return(<>
                 
-                <ul><li style={{}}>{item.label}</li></ul>
+                <ul className="hover:underline hover:font-bold "><li>{item.label}</li></ul>
                 </>
                 )
             })}
