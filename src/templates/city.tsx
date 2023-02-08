@@ -305,10 +305,10 @@ const City: Template<TemplateRenderProps> = ({
       "");
     let result: any = removeSpecialCharacters.replaceAll(" ", "-");
     if(!entity.slug || entity.slug == "undefined"){
-      detailPageUrl = `${entity.id}-${result}`
+      detailPageUrl = `${entity.id}-${result}.html`
     }
     else{
-      detailPageUrl = `${entity.slug.toString()}.`
+      detailPageUrl = `${entity.slug.toString()}.html`
     }
     return (
       <>
