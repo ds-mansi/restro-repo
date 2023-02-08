@@ -108,7 +108,7 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   //     url = `${url}/${i.slug}/${document.slug.toString()}.html`
   //   }
   // })
-  return `${document.slug.toString()}`;
+  return `${document.slug.toString()}.html`;
 };
 
 
@@ -308,7 +308,7 @@ const City: Template<TemplateRenderProps> = ({
       detailPageUrl = `${entity.id}-${result}.html`
     }
     else{
-      detailPageUrl = `${entity.slug.toString()}.html`
+      detailPageUrl = `${entity.slug.toString()}.`
     }
     return (
       <>
