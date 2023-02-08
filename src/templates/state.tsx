@@ -87,12 +87,12 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url = "";
   document.dm_directoryParents.map((i: any) => {
     if (i.meta.entityType.id == 'Vodafone_country') {
-      url += i.slug + "/";
+      url += i.slug + ".html";
     }
   });
   url += document.slug.toString();
 
-  return url + '.html';
+  return url + ".html";
 };
 
 
@@ -313,7 +313,7 @@ const State: Template<TemplateRenderProps> = ({
           <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
             <Link
               key={entity.slug}
-              href={"/" + entity.slug + ".html"}
+              href={entity.slug + ".html"}
               className="hover:text-red"
               rel="noopener noreferrer" eventName={`name`}
             >

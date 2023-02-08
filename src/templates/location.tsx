@@ -174,7 +174,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           rel: "canonical",
           href: `${document._site.c_canonical?document.c_canonical:stagingBaseurl
 
-            }${document.slug?document.slug:`${document.name.toLowerCase()}`}.html`,
+            }${document.slug?document.slug:`${document.name.toLowerCase()}`}`,
         },
       },
 

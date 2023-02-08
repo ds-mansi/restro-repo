@@ -99,16 +99,16 @@ let slugString = "";
 //   return slugString + document.slug + ".html";
 // };
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  var url: any = ""
-  document.dm_directoryParents.map((i: any) => {
-    if (i.meta.entityType.id == 'Vodafone_country') {
-      url = `${i.slug}`
-    }
-    else if (i.meta.entityType.id == 'Vodafone_region') {
-      url = `${url}/${i.slug}/${document.slug.toString()}.html`
-    }
-  })
-  return "/" + document.slug.toString() + ".html";
+  // var url: any = ""
+  // document.dm_directoryParents.map((i: any) => {
+  //   if (i.meta.entityType.id == 'Vodafone_country') {
+  //     url = `${i.slug}`
+  //   }
+  //   else if (i.meta.entityType.id == 'Vodafone_region') {
+  //     url = `${url}/${i.slug}/${document.slug.toString()}.html`
+  //   }
+  // })
+  return `${document.slug.toString()}`;
 };
 
 
@@ -305,10 +305,10 @@ const City: Template<TemplateRenderProps> = ({
       "");
     let result: any = removeSpecialCharacters.replaceAll(" ", "-");
     if(!entity.slug || entity.slug == "undefined"){
-      detailPageUrl = `${entity.id}-${result}.html`
+      detailPageUrl = `${entity.id}-${result}`
     }
     else{
-      detailPageUrl = `${entity.slug.toString()}.html`
+      detailPageUrl = `${entity.slug.toString()}.`
     }
     return (
       <>
