@@ -87,12 +87,12 @@ export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url = "";
   document.dm_directoryParents.map((i: any) => {
     if (i.meta.entityType.id == 'Vodafone_country') {
-      url += i.slug + "/";
+      url += i.slug + ".html";
     }
   });
   url += document.slug.toString();
 
-  return url + '.html';
+  return url + ".html";
 };
 
 
