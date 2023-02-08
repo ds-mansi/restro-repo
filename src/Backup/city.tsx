@@ -16,7 +16,7 @@ import {
   GetHeadConfig,
   HeadConfig,
 } from "@yext/pages";
-import BreadCrumbs from "../components/layouts/Breadcrumb";
+import BreadCrumb from "../components/layouts/Breadcrumb";
 import Banner from "../components/locationDetail/banner";
 import { StaticData } from "../../sites-global/staticData";
 import { Addresssvg, favicon, mobilesvg, regionNames, stagingBaseurl } from "../../sites-global/global";
