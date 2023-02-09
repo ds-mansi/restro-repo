@@ -55,7 +55,7 @@ const BreadCrumbs = (props: data) => {
           });
         }
       }
-
+console.log(data)
 
       breadcrumbs = data.map((crumb: any) => (
         <li key={crumb.slug}>
