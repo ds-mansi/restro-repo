@@ -99,15 +99,15 @@ let slugString = "";
 //   return slugString + document.slug + ".html";
 // };
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  // var url: any = ""
-  // document.dm_directoryParents.map((i: any) => {
-  //   if (i.meta.entityType.id == 'Vodafone_country') {
-  //     url = `${i.slug}`
-  //   }
-  //   else if (i.meta.entityType.id == 'Vodafone_region') {
-  //     url = `${url}/${i.slug}/${document.slug.toString()}.html`
-  //   }
-  // })
+  var url: any = ""
+  document.dm_directoryParents.map((i: any) => {
+    if (i.meta.entityType.id == 'ce_country') {
+      url = `${i.slug}`
+    }
+    else if (i.meta.entityType.id == 'ce_region') {
+      url = `${url}/${i.slug}/${document.slug.toString()}.html`
+    }
+  })
   return `${document.slug.toString()}.html`;
 };
 
@@ -310,6 +310,7 @@ const City: Template<TemplateRenderProps> = ({
     else{
       detailPageUrl = `${entity.slug.toString()}.`
     }
+    console.log(entity.slug,"slug")
     return (
       <>
      
@@ -317,7 +318,7 @@ const City: Template<TemplateRenderProps> = ({
       <div className="w-full sm:w-1/2 xl:w-1/3 px-[15px]">
         <div className="near-location">
           <h4>
-            <Link eventName={"Location detail"} key={entity.slug} href={`/${detailPageUrl}`}>
+            <Link eventName={"Location detail"} key={entity.slug} href={`${entity.id}`}>
               {entity.name}
             </Link>
           </h4>
@@ -450,7 +451,7 @@ const City: Template<TemplateRenderProps> = ({
               </svg>{" "}
               Get Directions
             </Link>
-            <a className="view-details" href={`/${detailPageUrl}`}>
+            <a className="view-details" href={`${entity.id}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22.403"

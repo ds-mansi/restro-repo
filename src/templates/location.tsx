@@ -12,6 +12,7 @@ import { nearByLocation } from "../types/nearByLocation";
 import Logo from "../images/logo-header.svg"
 import offerBanner from "../images/offer-banner.jpg"
 import IframeMap from "../components/locationDetail/IframeMap";
+import BreadCrumb from "../components/layouts/Breadcrumb";
 import "../index.css";
 import {
   Template,
@@ -33,7 +34,6 @@ import Menu from "../components/locationDetail/Menu";
 import PhotoSlider from "../components/locationDetail/PhotoSlider";
 import PhotoGallery from "../components/locationDetail/PhotoGallery";
 import About from "../components/locationDetail/About";
-import Breadcrumb from "../components/layouts/Breadcrumb";
 import CustomMap from "../components/locationDetail/CustomMap";
 import BreadCrumbs from "../components/layouts/Breadcrumb";
 import StoreHighlight from "../components/locationDetail/SoreHighlight";
@@ -75,7 +75,12 @@ export const config: TemplateConfig = {
       "c_banner",
       "c_restroServices",
       "c_faq.name",
-      "c_faq.answer"
+      "c_faq.answer",
+      "dm_directoryParents.name",
+      "dm_directoryParents.slug",
+      "dm_directoryParents.meta.entityType",
+      "dm_directoryParents.c_addressRegionDisplayName",
+
 
 
       //"cityCoordinate"
@@ -280,8 +285,12 @@ const Location: Template<ExternalApiRenderData> = ({
     c_about,
     c_banner,
     c_restroServices,
-    c_faq
+    c_faq,
+    dm_directoryParents
+    
   } = document;
+
+  
 
  let templateData = { document: document, __meta: __meta };
   let hoursSchema = [];
@@ -455,6 +464,12 @@ console.log(externalApiData,"static" )
         <AnalyticsScopeProvider name={""}>
         <Header _site={_site}/>
        <img src={c_banner?.banner?.url}/>
+       <BreadCrumbs
+        name={name}
+        parents={dm_directoryParents}
+        // baseUrl={relativePrefixToRoot}
+        address={address}
+      ></BreadCrumbs>
       <div className="container">
             <div className='banner-text banner-dark-bg justify-center text-center'>
               <h1 className="">{name}</h1>

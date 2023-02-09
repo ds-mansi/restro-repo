@@ -86,7 +86,7 @@ export const config: TemplateConfig = {
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url = "";
   document.dm_directoryParents.map((i: any) => {
-    if (i.meta.entityType.id == 'Vodafone_country') {
+    if (i.meta.entityType.id == 'ce_country') {
       url += i.slug + ".html";
     }
   });
@@ -274,13 +274,13 @@ const State: Template<TemplateRenderProps> = ({
       if (entity.dm_directoryChildrenCount == 1) {
         if (
           entity.dm_directoryChildren &&
-          entity.dm_directoryChildren[0].slug
+          entity.dm_directoryChildren[0].id
         ) {
           return (
             <div className="w-1/2 storelocation-category md:w-1/3 lg:w-1/4 px-4">
               <Link
                 key={entity.slug}
-                href={"/" + entity.dm_directoryChildren[0].slug + ".html"}
+                href={"/" + entity.dm_directoryChildren[0].id }
                 className="hover:text-red"
                 eventName={entity.name}
               >
