@@ -451,7 +451,7 @@ const City: Template<TemplateRenderProps> = ({
               </svg>{" "}
               Get Directions
             </Link>
-            <a className="view-details" href={`${entity.id}`}>
+            <a className="view-details" href={`${entity.slug}`}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="22.403"
