@@ -86,7 +86,7 @@ export const config: TemplateConfig = {
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   let url = "";
   document.dm_directoryParents.map((i: any) => {
-    if (i.meta.entityType.id == 'ce_country') {
+    if (i.meta.entityType.id == 'Vodafone_country') {
       url += i.slug + ".html";
     }
   });
